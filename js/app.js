@@ -146,11 +146,43 @@ const bondFilms = [
 ];
 // Create a new array called bondTitles with only the titles of the Bond films, and console.log the new array.
 // 🔴 Commit: "bondTitles array"
-//
+const bondTitles = []
+for (let i = 0; i < bondFilms.length; i++) {
+  bondTitles.push(bondFilms[i].title);
+}
+console.log(bondTitles);
 // Create a new array oddBonds, of only the Bond films released on odd-numbered years.
 // 🔴 Commit: "oddBonds"
-//
+const oddBonds = []
+for (let i = 0; i < bondFilms.length; i++) {
+  // console.log(bondFilms[i].year % 2 !== 0);
+  if (bondFilms[i].year % 2 != 0){
+    oddBonds.push(bondFilms[i]);
+  }
+}
+console.log(oddBonds);
 // Determine the total cumulative gross of the Bond franchise, and console.log the result.
+//Loop through the array
+let cumulativeGross = 0;
+for (let i = 0; i < bondFilms.length; i++) {
+//Grab the gross and commit to string
+  const grossString = bondFilms[i].gross
+  let cleanNumString = "";
+//Loop through string - if char !== $ && char !== , then add char to cleanNumString
+  for (let j = 0; j < grossString.length; j++) {
+    if (grossString[j] !== "$" && grossString[j] !== ",") {
+      cleanNumString += grossString[j];
+      // console.log(cleanNumString);
+    }
+  }
+  //update sum after cleaning every grossString
+  //sum += Number(cleanNumString)
+  cumulativeGross += Number(cleanNumString);
+}
+console.log(cumulativeGross);
+
+
+
 // Hint: To make the grosses into usable numbers, look into the .replace Javascript method (there are many ways to do this, however). Look into parseInt() also.
 //
 // 🔴 Commit: "bond films gross"
