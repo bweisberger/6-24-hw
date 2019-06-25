@@ -112,7 +112,8 @@ const inception = {
    }
 }
 // Change the value of limbo to null.
-//
+inception.reality.dreamLayer1.dreamLayer2.dreamLayer3.dreamLayer4.dreamLayer5.dreamLayer6.limbo = null
+console.log(inception.reality.dreamLayer1.dreamLayer2.dreamLayer3.dreamLayer4.dreamLayer5.dreamLayer6.limbo);
 // 🔴 Commit: "object-ception"
 
 // 5-7. Bond Films
